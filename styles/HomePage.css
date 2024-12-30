@@ -228,6 +228,7 @@ section .ceoContainer button{
 
     section{
       background-color: yellow;
+      outline: 2px solid red;
     }
     
     section .ceoContainer{
@@ -235,6 +236,7 @@ section .ceoContainer button{
         left: 5%;
         width: 90%;
         height: 90%;
+      outline: 2px solid green;
     }
     
     section .ceoContainer .ceoImage{
