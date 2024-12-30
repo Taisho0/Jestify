@@ -107,6 +107,7 @@ header ul li{
 section{
     grid-area: section;
     position: relative;
+    overflow: hidden;
 }
 
 section .ceoContainer{
@@ -251,9 +252,4 @@ section .ceoContainer button{
         top: 8em;
         left: 43%;
     }
-}
-
-.bouncing{
-    animation: bounce 0.8s ease-in-out infinite;
-    -webkit-animation: bounce 0.8s ease-in-out infinite;
 }
