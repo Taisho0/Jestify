@@ -107,7 +107,7 @@ header ul li{
 section{
     grid-area: section;
     position: relative;
-    /* background-color: yellow; */
+    background-color: yellow;
 }
 
 section .ceoContainer{
