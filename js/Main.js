@@ -34,10 +34,10 @@ tailwind.config = {
     //This is for foreign source
     extend: {
       backgroundImage: {
-        'main': "url('/img/LoginPage.jpeg')",
-        'logo': "url('/img/JestifyLogo0.png')",
-        'ceo': "url('/img/CEO.png')"
-      },
+        'main': "url('img/LoginPage.jpeg')",
+        'logo': "url('img/JestifyLogo0.png')",
+        'ceo': "url('img/CEO.png')"
+      }
     }
   }
 }
