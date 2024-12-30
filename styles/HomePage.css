@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: 2px solid red;
 }
 
 body{
@@ -225,18 +226,12 @@ section .ceoContainer button{
     header ul li a{
         font-size: 10px;
     }
-
-    section{
-      background-color: yellow;
-      outline: 2px solid red;
-    }
     
     section .ceoContainer{
         top: 0.2em;
         left: 5%;
         width: 90%;
         height: 90%;
-      outline: 2px solid green;
     }
     
     section .ceoContainer .ceoImage{
