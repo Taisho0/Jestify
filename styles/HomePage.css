@@ -3,6 +3,257 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body{
-  background-image: url('img/CEO.png');
+    height: 100vh; /* require for occupying the whole screen*/
+    display: grid;
+    grid-template-columns: 240px auto;
+    grid-template-rows: 150px auto;
+    grid-template-areas:
+    "logo search"
+    "header section";
+}
+
+.logo{
+    grid-area: logo;
+    position: relative;
+}
+.logo> *{
+    margin-top: 10%;
+    justify-self: center;
+}
+
+.search{
+    grid-area: search;
+    position: relative;
+}
+
+.search .searchContainer{
+    width: 20vw;
+    height: 40px;
+    margin-top: 4em;
+    margin-right: 4em;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-self: end;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 14px;
+    
+}
+
+.search .searchContainer input{
+    width: 70%;
+    height: 80%;
+    border: none;
+    margin-left: 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(20, 161, 121);
+    font-size: 14px;
+}
+.search .searchContainer input:focus{
+    outline: 2px solid rgb(42, 250, 45);
+}
+.search .searchContainer input:focus::placeholder{
+    transform: translateY(-12px);
+    transition: 0.5s cubic-bezier(0.6, -0.55, 0.25, 1.55);
+    color: rgb(4, 79, 61);
+}
+
+.search .searchContainer input::placeholder, button{
+    text-align: center;
+}
+
+.search .searchContainer button{
+    width: 60px;
+    height: 80%;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+header{
+    grid-area: header;
+    position: relative;
+    align-content: center;
+}
+header ul{
+    width: 240px;
+    height: 30em;
+    border: 2px solid white;
+    border-radius: 5px;
+    display: flex;
+    padding-top: 3em;
+    justify-content: start;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5em;
+}
+header ul li{
+    width: 60%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+section{
+    grid-area: section;
+    position: relative;
+    /* background-color: yellow; */
+}
+
+section .ceoContainer{
+    position: absolute;
+    top: 5px;
+    left: 10em;
+    width: 500px;
+    height: 95%;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+section .ceoContainer h1{
+    position: relative;
+    justify-content: center;
+    justify-self: center;
+    margin-top: 5em;
+    margin-left: 8em;
+}
+section .ceoContainer h1 span{
+    display: flex;
+    justify-self: center;
+}
+
+section .ceoContainer .ceoImage{
+    position: absolute;
+    top: 30px;
+    left: 5em;
+
+}
+
+section .ceoContainer p{
+    position: relative;
+    top: 2em;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+section .ceoContainer button{
+    position: relative;
+    top: 3.2em;
+    left: 13em;
+    width: 6em;
+    height: 2em;
+    text-wrap: nowrap;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+
+@media(max-width: 320px), (max-width: 390px),(max-width: 428px),(max-width: 768px){
+    body{
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        grid-template-rows: 100px 60px 1fr;
+        grid-template-columns: 100px 1fr;
+        grid-template-areas:
+        "logo search"
+        "header header"
+        "section section";
+    }
+    .logo> *{
+        margin-top: 10%;
+        margin-left: 50%;
+    }
+    .search .searchContainer{
+        margin-top: 2em;
+        margin-right: 1.5em;
+        width: 15em;
+    }
+
+    .search .searchContainer input{
+        width: 60%;
+        height: 77%;
+        position: relative;
+        padding-left: 5px;
+        margin-left: 0;
+        border-radius: 2px;
+    }
+
+    .search .searchContainer input{
+        font-size: 10px;
+        text-align: center;
+    }
+
+    button{
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .search .searchContainer button{
+        width: 60px;
+        height: 80%;
+        border: 2px solid white;
+        border-radius: 5px;
+    }
+    header ul{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        height: 3.6em;
+        gap: 1em;
+        padding-top: 0.2em;
+    }
+    header ul li{
+        width: 15%;
+        height: 2.5em;
+        display: flex;
+    }
+    header ul li a{
+        font-size: 10px;
+    }
+    
+    section .ceoContainer{
+        top: 2em;
+        left: 5%;
+        width: 90%;
+        height: 90%;
+    }
+    
+    section .ceoContainer .ceoImage{
+        scale: 0.8;
+        top: 1em;
+        left: 2em;
+    }
+    
+    section .ceoContainer h1, section .ceoContainer span, section .ceoContainer p{
+        font-size: 12px;
+    }
+    
+    section .ceoContainer p{
+        padding: 5px;
+        top: 5em;
+    }
+    section .ceoContainer button{
+        top: 8em;
+        left: 43%;
+    }
+}
+
+.bouncing{
+    animation: bounce 0.8s ease-in-out infinite;
+    -webkit-animation: bounce 0.8s ease-in-out infinite;
 }
