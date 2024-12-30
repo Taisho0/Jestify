@@ -30,14 +30,10 @@ tailwind.config = {
     blur: {
       xs: '2px',
     },
-      
-    //This is for foreign source
-    extend: {
-      backgroundImage: {
+    backgroundImage: {
         'main': "url('img/LoginPage.jpeg')",
         'logo': "url('img/JestifyLogo0.png')",
         'ceo': "url('img/CEO.png')"
-      }
     }
   }
 }
