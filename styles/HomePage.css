@@ -159,7 +159,7 @@ section .ceoContainer button{
 }
 
 
-@media(max-width: 320px), (max-width: 390px),(max-width: 428px),(max-width: 768px){
+@media(max-width: 320px), (max-width: 390px), (max-width: 360px), (max-width: 428px), (max-width: 768px){
     body{
         background-position: center;
         background-size: cover;
