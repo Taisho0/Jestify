@@ -1,4 +1,4 @@
- *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -92,7 +92,6 @@ header ul{
     display: flex;
     padding-top: 3em;
     justify-content: start;
-    justify-items: center;
     align-items: center;
     flex-direction: column;
     gap: 1.5em;
@@ -100,11 +99,15 @@ header ul{
 header ul li{
     width: 60%;
     height: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border: 2px solid white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    column-gap: 10px;
     border-radius: 5px;
+}
+header ul li i{
+    padding-top: 5px;
 }
 
 section{
@@ -257,19 +260,40 @@ section .ceoContainer button{
         flex-direction: row;
         width: 90%;
         height: 2em;
-        gap: 1.2em;
+        column-gap: 1.2em;
         padding-top: 0em;
+        padding: 10px;
         border-width: var(--phoneBorder);
     }
     header ul li{
-        width: 11%;
+        width: 12%;
         height: 1.19em;
         display: flex;
+        justify-content: center;
+        gap: 0;
+        flex: 1 0 45px;
+        padding-left: 0;
+        margin-left: 0;
+        align-items: center;
         border-width: 1px;
+        border-radius: 3px;
     }
 
+    header ul li i{
+        scale: 0.4;
+        display: flex;
+        position: relative;
+        top: -1px;
+        align-self: center;
+    }
+    
     header ul li a{
-        font-size: 6px;
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+        line-height: 20px;
+        font-size: 4px;
     }
 
     section{
